@@ -1,0 +1,172 @@
+// Border !!! ->
+.full-border-red{
+
+    border: 5px solid red !important;
+}
+.full-border-yellow{
+
+    border: 5px solid #F5E400 !important;
+}
+.b-btlr-s-2-black{
+
+    border-bottom: 2px solid #000000 !important;
+    border-left: 2px solid #000000 !important;
+    border-top: 2px solid #000000 !important;
+    border-right: 2px solid #000000 !important;
+}
+.b-btlr-s-2-white{
+
+    border-bottom: 2px solid white !important;
+    border-left: 2px solid white !important;
+    border-top: 2px solid white !important;
+    border-right: 2px solid white !important;
+}
+.b-btlr-s-2-blue{
+
+    border-bottom: 2px solid #009688 !important;
+    border-left: 2px solid #009688 !important;
+    border-top: 2px solid #009688 !important;
+    border-right: 2px solid #009688 !important;
+}
+
+.b-blr-s-2-black{
+
+    border-bottom: 2px solid #000000 !important;
+    border-left: 2px solid #000000 !important;
+    border-right: 2px solid #000000 !important;
+}
+
+.b-bl-s-2-blue{
+
+    border-bottom: 2px solid #009688 !important;
+    border-left: 2px solid #009688 !important;
+}
+
+.b-br-s-2-blue{
+
+    border-bottom: 2px solid #009688 !important;
+    border-right: 2px solid #009688 !important;
+}
+
+.b-bl-s-2-black{
+
+    border-bottom: 2px solid black !important;
+    border-left: 2px solid black !important;
+}
+
+.b-br-s-2-black{
+
+    border-bottom: 2px solid black !important;
+    border-right: 2px solid black !important;
+}
+
+.b-tlr-s-2-black{
+
+    border-top: 2px solid black !important;
+    border-left: 2px solid black !important;
+    border-right: 2px solid black !important;
+}
+
+.b-b-s-2-black{
+    border-bottom: 2px solid black !important;
+}
+
+.b-b-s-2-white{
+    border-bottom: 2px solid white !important;
+}
+
+.b-bt-s-1-black{
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+}
+
+.b-bt-s-2-white{
+    border-top: 2px solid white !important;
+    border-bottom: 2px solid white !important;
+}
+
+.b-bt-s-2-yellow{
+    border-top: 2px solid #e2d144 !important;
+    border-bottom: 2px solid #e2d144 !important;
+}
+
+.b-bt-s-2-green{
+    border-top: 2px solid #51a42d !important;
+    border-bottom: 2px solid #51a42d !important;
+}
+
+.b-bt-s-2-red{
+    border-top: 2px solid red !important;
+    border-bottom: 2px solid red !important;
+}
+
+.b-bt-s-2-blue{
+    border-top: 2px solid #1FCAD6 !important;
+    border-bottom: 2px solid #1FCAD6 !important;
+}
+
+.b-bt-s-2-black{
+    border-top: 2px solid black !important;
+    border-bottom: 2px solid black !important;
+}
+
+
+.b-blr-s-2-black{
+    border-bottom: 2px solid black !important;
+    border-left: 2px solid black !important;
+    border-right: 2px solid black !important;
+}
+
+.b-tlr-s-2-black{
+    border-top: 2px solid black !important;
+    border-left: 2px solid black !important;
+    border-right: 2px solid black !important;
+}
+
+.b-t-s-2-white{
+
+    border-top: 2px solid white !important;
+}
+
+.b-t-s-2-black{
+
+    border-top: 2px solid black !important;
+}
+
+.b-r-s-2-black{
+
+    border-right: 2px solid black !important;
+}
+
+.b-r-s-2-white{
+
+    border-right: 2px solid white !important;
+}
+
+.b-l-s-2-black{
+
+    border-left: 2px solid black !important;
+}
+
+.b-l-s-2-white{
+
+    border-left: 2px solid white !important;
+}
+
+.border-psych{
+    /* #1 */
+    border: 2px solid hsl(0, 0%, 40%);
+
+    /* #3 */
+    outline: 2px solid hsl(0, 0%, 60%);
+
+    /* #4 AND INFINITY!!! (CSS3 only) */
+    box-shadow:
+      0 0 0 5px hsl(0, 0%, 80%),
+      0 0 0 10px hsl(0, 0%, 90%);
+}
+
+.border-yellow{
+
+    border-color: #F5E400 !important;
+}

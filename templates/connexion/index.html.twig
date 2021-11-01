@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    <div class="h1 mx-auto mt-5 text-center text-white font-coolvetica user-select-none">Connexion</div>
+
+    <div class="container p-3 bg-light text-center border-psych font-coolvetica">
+
+        <a href="/inscription" class="container-fluid btn btn-lg btn-dark text-info border border-info fs-3">Vous n'êtes pas encore inscrit ?</a>
+        
+        <div class="position-relative text-center w-100 bg-dark p-5 shadow-inset-f1">
+
+            <form action="" method="POST">
+
+                {# Token CSRF #}
+                <input type="hidden" 
+                    name="tokenCSRF" 
+                    value="{{ csrf_token('connexion_user_csrf') }}"
+                >
+
+                <div class="container mx-auto text-white">
+                    
+                    {# Bloc d'érreures pour javascript #}
+                    <small id="error" class="d-none text-danger"></small>
+
+                    {# Nom d'utilisateur #}
+                    <div class="form-group mb-2 fs-4">
+                        <label for="username">Nom d'utilisateur ou adresse e-mail :</label>
+                        <input type="text" class="form-control mx-auto w-50" placeholder="John.Doe" name="username" id="username">
+                    </div>
+
+                    {# Mot de passe #}
+                    <div class="form-group mb-2 fs-4">
+                        <label for="pass">Mot de passe :</label>
+                        <input type="password" class="form-control mx-auto w-50" placeholder="**********************" name="pass" id="pass">
+                    </div>
+                </div>
+
+                {# Lien de réinitalisation du mot de passe #}
+                <a class="link-info fs-4" href="/reset-pass">Mot de passe oublié ?</a>
+
+                {# Bouton d'envoi #}
+                <div class="mx-auto mt-3">
+                    <button type="submit" id="submit_button" class="btn btn-lg fs-3 btn-dark border border-info">Se connecter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

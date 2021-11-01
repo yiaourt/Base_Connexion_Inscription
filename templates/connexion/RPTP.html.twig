@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{# Titre de l'onglet #}
+{% block title %}
+	Connexion
+{% endblock %}
+
+{% block body %}
+	
+	<div class="h1 mx-auto mt-5 text-center text-white font-coolvetica user-select-none">Réinitialisation de votre mot de passe</div>
+
+    <div class="container p-3 bg-light text-center border-psych font-coolvetica">
+
+        <div class="position-relative text-center fs-4 w-100 bg-dark p-5 shadow-inset-f1">
+
+            {# Formulaire de modification de mot de passe. #}
+			<form action="" method="POST">
+
+				{# Le CSRF token...
+				/!\ IMPORTANT! /!\ sécurité pour éviter que des données POST tiers (exterieur) passe par PHP ! /!\ IMPORTANT à ne pas divulguer par exemple ... ! #}
+				{# the argument of csrf_token() is an arbitrary string used to generate the token #}
+				<input type="hidden" name="tokenCSRF" value="{{ csrf_token('security_new_pass_tkcsrf') }}"/>
+
+				{# identifiant token du compte à réinitialiser #}
+				<input type="hidden" name="account_token_id" value="{{ token_id }}">
+
+				{# inputs du nouveau mot de passe à modifier #}
+				<div class="form-group text-white">
+					
+					<label for="new_pass_RPTP_1">Nouveau mot de passe :</label>
+					<input type="password" id="new_pass_RPTP_1" name="new_pass_RPTP_1" class="form-control border border-dark w-50 ms-auto me-auto">
+
+				</div>
+
+				<div class="form-group text-white">
+					
+					<label for="new_pass_RPTP_2">Répétez le nouveau mot de passe :</label>
+					<input type="password" id="new_pass_RPTP_2" name="new_pass_RPTP_2" class="form-control border border-dark w-50 ms-auto me-auto">
+
+				</div>
+
+				{# Bouton d'envoi #}
+                <div class="mx-auto mt-3">
+                    <button type="submit" id="submit_button" class="btn btn-lg fs-3 btn-dark border border-info">Enregistrer les modifications</button>
+                </div>
+
+			</form>
+        </div>
+    </div>
+
+{% endblock %}

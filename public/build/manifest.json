@@ -1,0 +1,22 @@
+{
+  "build/base.css": "/build/base.css",
+  "build/base.js": "/build/base.js",
+  "build/accueil.js": "/build/accueil.js",
+  "build/inscription.js": "/build/inscription.js",
+  "build/reset_pass.js": "/build/reset_pass.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/vendors-node_modules_jquery_dist_jquery_js.js": "/build/vendors-node_modules_jquery_dist_jquery_js.js",
+  "build/vendors-node_modules_core-js_internals_export_js-node_modules_core-js_internals_object-create-1a8c68.js": "/build/vendors-node_modules_core-js_internals_export_js-node_modules_core-js_internals_object-create-1a8c68.js",
+  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_bootstrap_dist_js_boo-3fa433.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_bootstrap_dist_js_boo-3fa433.js",
+  "build/vendors-node_modules_core-js_modules_es_regexp_constructor_js-node_modules_core-js_modules_es-22c80c.js": "/build/vendors-node_modules_core-js_modules_es_regexp_constructor_js-node_modules_core-js_modules_es-22c80c.js",
+  "build/fonts/coolvetica rg.ttf": "/build/fonts/coolvetica rg.42f59941.ttf",
+  "build/fonts/MaterialIcons-Regular.eot": "/build/fonts/MaterialIcons-Regular.4674f8de.eot",
+  "build/fonts/MaterialIcons-Regular.ttf": "/build/fonts/MaterialIcons-Regular.5e7382c6.ttf",
+  "build/fonts/riffic.ttf": "/build/fonts/riffic.b46b5c87.ttf",
+  "build/fonts/nasalization-rg.otf": "/build/fonts/nasalization-rg.4cbf2019.otf",
+  "build/fonts/MaterialIcons-Regular.woff": "/build/fonts/MaterialIcons-Regular.83bebaf3.woff",
+  "build/fonts/MaterialIcons-Regular.woff2": "/build/fonts/MaterialIcons-Regular.cff684e5.woff2",
+  "build/fonts/Stanberry.ttf": "/build/fonts/Stanberry.9524c688.ttf",
+  "build/fonts/corben.ttf": "/build/fonts/corben.f63a6cf0.ttf",
+  "build/fonts/stoNe.ttf": "/build/fonts/stoNe.19cd3d3c.ttf"
+}

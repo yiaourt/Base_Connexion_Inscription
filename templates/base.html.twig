@@ -2,18 +2,181 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
+        <title>Nom Du Site | {% block title %}{% endblock %}</title>
+        
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('base') }}
         {% endblock %}
     </head>
+
     <body>
+
+        <header>
+            {# Ci dessous, la barre de navigation ! #}
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark bShadow-12 ps-3 pe-3">
+                
+                <a class="navbar-brand font-coolvetica fs-2" href="/">NomDuSite</a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        
+                        {# Les liens de navigation ! #}
+
+                        {% if controller_name == "AccueilController" %}
+                            <li class="nav-item"> {# Active si controller_name #}
+                                <a class="nav-link active fs-4" href="/">Accueil</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link fs-4" href="/">Accueil</a>
+                            </li>
+                        {% endif %}
+
+                        {% if controller_name == "CategoriesController" %}
+                            <li class="nav-item"> {# Active si controller_name #}
+                                <a class="nav-link active fs-4" href="/categories">Catégories</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item"> 
+                                <a class="nav-link fs-4" href="/categories">Catégories</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                <ul class="navbar-nav float-right">
+
+                    {# Ci dessous, les liens de profil et gestion de compte/site ! #}
+                    {% if username is defined %}
+
+                        <img id="imgProfil_nav" class="align-middle" src="{{ img_profile }}" alt="Image de Profil" width="auto" height="40">
+
+                        <li class="nav-item dropdown fs-3 {% if controller_name == 'ProfilController' or controller_name == 'TricksPointsController' or controller_name == 'RulesController' or controller_name == 'AdminController' %}active{% endif %}">
+
+                            <a class="nav-link user-select-none dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ username }}
+                            </a>
+                            
+                            <ul id="dropdown_user" class="fs-3 dropdown-menu dropdown-menu-end border border-white bg-dark text-white p-2" aria-labelledby="navbarDropdown">
+                                
+                                {% if permission == 'admin' %}<li><a class="dropdown-item btn-dark w-100 text-success {% if controller_name == 'AdminController' %}active{% endif %}" href="/admin">Panel Admin</a></li>{% endif %}
+                                
+                                </li><a class="dropdown-item text-white hover-black w-100 {% if controller_name == 'ProfilController' %}active{% endif %}" href="/profil">Mon profil</a></li>
+                                
+                                </li><a class="dropdown-item text-white hover-black w-100 {% if controller_name == 'TricksPointsController' %}active{% endif %}" href="/tricks-points-profil">Points de Tricks : 
+
+                                {% if permission == 'admin' %}
+                                    999969696999999
+                                {% else %}
+                                    {{ tricks_points }}
+                                {% endif %}
+                                
+                                <i class="fab fa-strava fa-lg"></i></a></li>
+
+                                <div class="dropdown-divider"></div>
+                                
+                                </li><a class="dropdown-item bt hover-black w-100 text-primary {% if controller_name == 'RulesController' %}active{% endif %}" href="/rules">Règles de la communauté</a></li>
+                                
+                                </li><a class="dropdown-item b hover-black w-100 text-danger" href="/deconnexion">Déconnexion</a></li>
+                            </ul>
+                        </li>
+                        
+                    {% else %}
+
+                        {% if controller_name == "ConnexionController" %}
+                        <li class="nav-item">
+                            <a class="nav-link fs-4 active" href="/connexion">Connexion</a>
+                        </li>
+                        {% else %}
+                            <li class="nav-item">
+                            <a class="nav-link fs-4" href="/connexion">Connexion</a>
+                        </li>
+                        {% endif %}
+
+                        
+                        {% if controller_name == "InscriptionController" %}
+                            <li class="nav-item">
+                            <a class="nav-link fs-4 active" href="/inscription">Inscription</a>
+                        </li>
+                        {% else %}
+                            <li class="nav-item">
+                            <a class="nav-link fs-4" href="/inscription">Inscription</a>
+                        </li>
+                        {% endif %}
+
+                    {% endif %}
+                    
+                </ul>
+            </nav>
+        </header>
         {% block body %}{% endblock %}
+
+        {# On créer les avertissements (alertes etc...) ! #}
+        {% if success is defined %}
+            
+            <div id='success_alert' class='bg-dark text-success border border-success m-1 w-auto shadow-outset-f2 font-coolvetica'>
+            
+                <div class="position-relative p-4 w-100 h-100 fs-4">
+                    
+                    <i class="material-icons text-white position-absolute start-0 top-0">close</i>
+
+                    <i class='material-icons align-middle md-48'>done</i> - {{ success }}
+                </div>
+            </div>
+
+        {% endif %}
+
+        {% if app.request.query.get('success') %}
+
+            <div id='success_alert' class='bg-dark text-success border border-success m-1 w-auto shadow-outset-f2 font-coolvetica'>
+            
+                <div class="position-relative p-4 w-100 h-100 fs-4">
+                    
+                    <i class="material-icons text-white position-absolute start-0 top-0">close</i>
+
+                    <i class='material-icons align-middle md-48'>done</i> - {{ app.request.query.get('success') }}
+                </div>
+            </div>
+
+        {% endif %}
+
+        {% if error is defined %}
+
+            <div id="error_alert" class="bg-dark text-danger border border-danger m-1 w-auto shadow-outset-f2 font-coolvetica">
+
+                <div class="position-relative p-4 w-100 h-100 fs-4">
+
+                    <i class="material-icons text-white position-absolute start-0 top-0">close</i>
+
+                    <i class="material-icons align-middle md-48">warning</i> - {{ error }}
+                </div>
+            </div>
+
+        {% endif %}
+
+        {% if app.request.query.get('error') %}
+
+            <div id="error_alert" class="bg-dark text-danger border border-danger m-1 w-auto shadow-outset-f2 font-coolvetica">
+
+                <div class="position-relative p-4 w-100 h-100 fs-4">
+
+                    <i class="material-icons text-white position-absolute start-0 top-0">close</i>
+
+                    <i class="material-icons align-middle md-48">warning</i> - {{ app.request.query.get('error') }}
+                </div>
+            </div>
+
+        {% endif %}
+
     </body>
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('base') }}
+    {% endblock %}
+
 </html>

@@ -1,0 +1,69 @@
+
+// Quelques polices d'écriture  -->
+@font-face {
+    font-family: coolvetica;
+    src: url('/public/fonts/coolvetica\ rg.ttf');
+}
+
+@font-face {
+    font-family: stanberry;
+    src: url('/public/fonts/Stanberry.ttf');
+}
+
+@font-face {
+    font-family: corben;
+    src: url('/public/fonts/corben.ttf');
+}
+
+@font-face {
+    font-family: stone;
+    src: url('/public/fonts/stoNe.ttf');
+}
+
+@font-face {
+    font-family: nasalization;
+    src: url('/public/fonts/nasalization-rg.otf');
+}
+
+@font-face {
+    font-family: riffic;
+    src: url('/public/fonts/riffic.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
+.font-coolvetica{
+    font-family: coolvetica;
+}
+
+.font-stanberry{
+    font-family: stanberry;
+}
+
+.font-corben{
+    font-family: corben;
+}
+
+.font-stone{
+    font-family: 'stone', sans-serif;
+}
+
+.font-nasalization{
+    font-family: 'nasalization', sans-serif;
+}
+
+.font-riffic{
+    font-family: 'riffic', sans-serif;
+}
+
+.font-worksans{
+    font-family: 'Work Sans', sans-serif;
+}
+
+// Quelques couleurs de textes
+.hover-black{
+    &:hover{
+
+        color: black !important;
+    }    
+}

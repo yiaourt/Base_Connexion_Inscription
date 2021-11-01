@@ -1,0 +1,38 @@
+
+// Feuilles de style SCSS mobile de la base du site
+@media (max-device-width: 1365px) {
+
+	.d-flex{
+
+		text-align: center !important;
+
+		display: block !important;
+
+		width: 100% !important;
+
+		>div, >a{
+
+			text-align: center !important;
+			
+			width: 100% !important;
+
+			display: block !important;
+
+			margin: auto !important;
+			margin-top: 10px !important;
+		}
+	}
+
+	.w-14{
+		width: 50% !important;
+	}
+
+	.w-42{
+		width: 100% !important;
+	}
+
+	.w-50{
+
+		width: 100% !important;
+	}
+}
