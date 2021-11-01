@@ -216,7 +216,7 @@ class ResetPassController extends AbstractController
                                 ->from('testomax07@gmail.com')
                                 ->to($user_mail_SQL)
 
-                                ->subject('Wiki-Tricks | Réinitialisation du mot de passe')
+                                ->subject('NomDuSite | Réinitialisation du mot de passe')
                                 
                                 ->html('<p>Une demande de réinitialisation du mot de passe à était fait sur votre compte. <br><br>
 
@@ -225,7 +225,7 @@ class ResetPassController extends AbstractController
                                     <a href="'.$_SERVER['HTTP_HOST'].'/reset-pass?token='.$user_token_csrf_RPTP.'">Le lien de réinitialisation</a>
 
                                     <br><br>
-                                    Cordialement, l\'équipe de Wiki-Tricks.
+                                    Cordialement, l\'équipe de NomDuSite.
                                     ');
 
                             $mailer->send($email); // Envoit du mail pour RPTP !

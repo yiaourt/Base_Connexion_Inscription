@@ -49,7 +49,7 @@ class __TwigTemplate_b9620f0d1c5e90df8214513d9d302285a4b9a5232ed22d8c3ff87a9453c
     <head>
         <meta charset=\"UTF-8\">
 
-        <title>Wiki-Tricks | ";
+        <title>Nom Du Site | ";
         // line 6
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
@@ -67,7 +67,7 @@ class __TwigTemplate_b9620f0d1c5e90df8214513d9d302285a4b9a5232ed22d8c3ff87a9453c
         // line 17
         echo "            <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark bShadow-12 ps-3 pe-3\">
                 
-                <a class=\"navbar-brand font-coolvetica fs-2\" href=\"/\">Wiki-Tricks</a>
+                <a class=\"navbar-brand font-coolvetica fs-2\" href=\"/\">NomDuSite</a>
                 
                 <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                     <span class=\"navbar-toggler-icon\"></span>
@@ -462,7 +462,7 @@ class __TwigTemplate_b9620f0d1c5e90df8214513d9d302285a4b9a5232ed22d8c3ff87a9453c
     <head>
         <meta charset=\"UTF-8\">
 
-        <title>Wiki-Tricks | {% block title %}{% endblock %}</title>
+        <title>Nom Du Site | {% block title %}{% endblock %}</title>
         
         {% block stylesheets %}
             {{ encore_entry_link_tags('base') }}
@@ -475,7 +475,7 @@ class __TwigTemplate_b9620f0d1c5e90df8214513d9d302285a4b9a5232ed22d8c3ff87a9453c
             {# Ci dessous, la barre de navigation ! #}
             <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark bShadow-12 ps-3 pe-3\">
                 
-                <a class=\"navbar-brand font-coolvetica fs-2\" href=\"/\">Wiki-Tricks</a>
+                <a class=\"navbar-brand font-coolvetica fs-2\" href=\"/\">NomDuSite</a>
                 
                 <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                     <span class=\"navbar-toggler-icon\"></span>
@@ -639,6 +639,6 @@ class __TwigTemplate_b9620f0d1c5e90df8214513d9d302285a4b9a5232ed22d8c3ff87a9453c
     {% endblock %}
 
 </html>
-", "base.html.twig", "C:\\xampp\\htdocs\\www\\wiki-tricks\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\www\\Base_Connexion_Inscription\\templates\\base.html.twig");
     }
 }

@@ -1291,3 +1291,11 @@ f8b1d3,::1,GET,http://localhost/get-turing-question,1635776717,,200
 3680c6,::1,GET,http://localhost/get-turing-question,1635776861,,200
 862ead,::1,GET,http://localhost/connexion,1635776863,,200
 dcb5ff,::1,GET,http://localhost/,1635777246,,200
+eee133,::1,GET,http://localhost/,1635779616,,200
+4f5e6d,::1,GET,http://localhost/connexion,1635779619,,200
+7049d2,::1,GET,http://localhost/inscription,1635779621,,200
+a877db,::1,GET,http://localhost/connexion,1635779622,,200
+f4e2ba,::1,GET,http://localhost/inscription,1635779654,,200
+e155cf,::1,GET,http://localhost/connexion,1635779679,,200
+c77f81,::1,GET,http://localhost/reset-pass,1635779681,,200
+48653b,::1,GET,http://localhost/get-turing-question,1635779681,,200
